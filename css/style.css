@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: 16px;
+  font-size: 20px;
   /* Variables  */
 }
 body {
@@ -21,7 +21,7 @@ main {
   border: 2px red dashed;
   grid-template-columns: 3fr 0.5fr 3fr;
   grid-template-rows: 3fr 0.5fr;
-  gap: calc(0.2rem + 4%);
+
   grid-template-areas:
     "column-left column-middle column-rigth"
     "footer footer footer";
@@ -44,7 +44,7 @@ div {
   height: 4rem;
   width: 80%;
   color: white;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: bold;
   align-items: center;
   justify-content: center;
@@ -60,10 +60,66 @@ div {
 }
 .column-middle {
   grid-area: column-middle;
+  display: flex;
+  flex-direction: column;
+  color: rgb(173, 170, 170);
+}
+.vertical-line {
+  border: rgb(173, 170, 170) 2px solid;
+  height: 40%;
+}
+.middle-conten {
+  border: rgb(173, 170, 170) 2px solid;
+  border-radius: 100%;
+  height: 4.5rem;
+  width: 4.5rem;
 }
 .column-rigth {
   grid-area: column-rigth;
+  display: flex;
+  flex-direction: column;
+  color: rgb(173, 170, 170);
+}
+.column-rigth span {
+  display: flex;
+  color: gray;
+  height: 3rem;
+  width: 15rem;
+}
+input {
+  border: none;
+  border-bottom: 2px solid rgb(77, 74, 74);
+  background-color: transparent;
+}
+.checkbox input {
+  color: gray;
+  margin-left: 6rem;
+  padding: 10px;
+  margin: 3vh auto;
+  display: table-cell;
+}
+#button {
+  font-size: 20px;
+  height: 2.7rem;
+  width: 7rem;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #6a97fe;
 }
 .footer {
   grid-area: footer;
+  display: flex;
+  font-size: 22px;
+  width: 100%;
+}
+
+.footer span {
+  display: table-cell;
+  text-decoration-line: none;
+}
+#smal-bordre {
+  height: 3rem;
+  border: 2px solid gray;
 }
