@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: 20px;
+  font-size: 16px;
   /* Variables  */
 }
 body {
@@ -13,12 +13,15 @@ body {
   width: 100vw;
   justify-content: center;
   align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+/* the main log in form */
 main {
   display: grid;
   height: 50%;
   width: 50%;
-  border: rgb(173, 170, 170) 2px solid;
+  border: #e4e3e7 2px solid;
   grid-template-columns: 3fr 0.5fr 3fr;
   grid-template-rows: 3fr 0.5fr;
 
@@ -32,6 +35,7 @@ div {
   align-items: center;
   border: 2px transparent dashed;
 }
+/* the left column  */
 .column-left {
   grid-area: column-left;
   display: flex;
@@ -58,22 +62,32 @@ div {
 #TW {
   background-color: #4dc8f1;
 }
+i {
+  border-radius: 5%;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  border-right: 3px solid rgba(128, 128, 128, 0.281);
+  padding-left: 5px;
+}
+/* separetion line in the middle */
 .column-middle {
   grid-area: column-middle;
   display: flex;
   flex-direction: column;
-  color: rgb(173, 170, 170);
+  color: #e4e3e7;
 }
 .vertical-line {
-  border: rgb(173, 170, 170) 2px solid;
+  border: #e4e3e7 2px solid;
   height: 40%;
 }
 .middle-conten {
-  border: rgb(173, 170, 170) 2px solid;
+  border: #e4e3e7 2px solid;
   border-radius: 100%;
   height: 4.5rem;
   width: 4.5rem;
 }
+/* the input box */
 .column-rigth {
   grid-area: column-rigth;
   display: flex;
@@ -86,10 +100,21 @@ div {
   height: 3rem;
   width: 15rem;
 }
+.column-rigth h2 {
+  color: #555260;
+}
 input {
   border: none;
-  border-bottom: 2px solid rgb(77, 74, 74);
+  border-bottom: 2px solid #e4e3e7;
   background-color: transparent;
+}
+#placholder2,
+#placholder1 {
+  color: #94919b;
+  font-weight: bold;
+  width: 14rem;
+  padding: 1rem;
+  font-size: 18px;
 }
 .checkbox input {
   color: gray;
@@ -99,7 +124,7 @@ input {
   display: table-cell;
 }
 #button {
-  font-size: 20px;
+  font-size: 19px;
   height: 2.7rem;
   width: 7rem;
   color: white;
@@ -108,18 +133,23 @@ input {
   border-radius: 4px;
   background-color: #6a97fe;
 }
+/* the last line in the form  */
 .footer {
   grid-area: footer;
   display: flex;
+  border: 2px solid #e4e3e7;
   font-size: 22px;
 }
 
-.footer span {
+.footer a {
   display: flex;
   text-decoration-line: none;
+  padding: 2rem;
 }
 .last-line h1 {
-  margin: 1rem;
-  height: 2rem;
-  border: 2px solid gray;
+  position: relative;
+  right: 13px;
+
+  height: 3rem;
+  border: 2px solid #e4e3e7;
 }
